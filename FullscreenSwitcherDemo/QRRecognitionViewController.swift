@@ -18,7 +18,7 @@ final class QRRecognitionViewController: UIViewController {
   // MARK: - Accessor
   // MARK: Public
   weak var delegate: QRRecognitionViewControllerDelegate?
-  
+
   // MARK: Private
   fileprivate let captureView: UIView = {
 

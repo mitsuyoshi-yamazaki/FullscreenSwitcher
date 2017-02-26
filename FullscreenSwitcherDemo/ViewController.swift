@@ -28,13 +28,15 @@ final class ViewController: UIViewController {
     let switcherController = FullscreenSwitcherController()
     switcherController.modalTransitionStyle = .crossDissolve
 
-//    let imageViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageViewController")
-//    switcherController.fullscreenViewController = imageViewController
-
+#if IOS_SIMULATOR
+    let imageViewController = self.storyboard!.instantiateViewController(withIdentifier: "ImageViewController")
+    switcherController.fullscreenViewController = imageViewController
+#else
     let qrCodeViewController = QRRecognitionViewController()
     switcherController.fullscreenViewController = qrCodeViewController
+#endif
 
-    let webViewController = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController")
+    let webViewController = self.storyboard!.instantiateViewController(withIdentifier: "WebViewController")
     switcherController.contentViewController = webViewController
 
     switcherController.switchButtonConfiguration = { (button, superViewFrame) in
