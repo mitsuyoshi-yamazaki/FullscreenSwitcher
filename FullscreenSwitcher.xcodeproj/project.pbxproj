@@ -61,7 +61,8 @@
 				2CACD64C1E62A64300C0ED18 /* LaunchScreen.storyboard */,
 				2CACD64F1E62A64300C0ED18 /* Info.plist */,
 			);
-			path = FullscreenSwitcher;
+			name = FullscreenSwitcher;
+			path = FullscreenSwitcherDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
