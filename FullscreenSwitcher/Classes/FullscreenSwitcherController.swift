@@ -25,6 +25,7 @@ public class FullscreenSwitcherController: UIViewController {
     }
   }
   public var switchButtonConfiguration: ((UIButton, CGRect) -> Void)! // swiftlint:disable:this force_unwrapping
+  public private(set) var contentViewHidden = false
 
   // MARK: Private
   private let fullscreenView: UIView = {
@@ -53,6 +54,8 @@ public class FullscreenSwitcherController: UIViewController {
 
     return button
   }()
+
+  private var isAnimating = false
 
   // MARK: - Lifecycle
   override public func viewDidLoad() {
@@ -87,15 +90,47 @@ public class FullscreenSwitcherController: UIViewController {
   // MARK: Public
   public func hideContentView(sender: AnyObject!) {
     print(#function)    // FixMe: remove debug code
-    setContentViewHidden(true)
+    setContentViewHidden(true, animated: true)
   }
 
   public func showContentView(sender: AnyObject!) {
     print(#function)    // FixMe: remove debug code
-    setContentViewHidden(false)
+    setContentViewHidden(false, animated: true)
   }
 
-  public func setContentViewHidden(_ isHidden: Bool) {
+  public func setContentViewHidden(_ isHidden: Bool, animated: Bool) {  // TODO: use animated 
+    guard isHidden != contentViewHidden else {
+      return
+    }
 
+    if isAnimating == true {
+      cancelAnimation()
+    }
+
+    contentView.isUserInteractionEnabled = false
+    contentView.isHidden = false
+
+    UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: { [weak self] _ in
+
+      if isHidden {
+        self?.contentView.alpha = 0.0
+      } else {
+        self?.contentView.alpha = 1.0
+      }
+
+    }) { [weak self] (completed) in
+
+      if isHidden {
+        self?.contentView.isHidden = true
+      } else {
+        self?.contentView.isHidden = false
+      }
+      self?.contentView.isUserInteractionEnabled = true
+      self?.contentViewHidden = isHidden
+    }
+  }
+
+  private func cancelAnimation() {
+    // TODO: implement here
   }
 }
