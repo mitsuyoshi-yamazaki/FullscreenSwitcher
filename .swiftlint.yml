@@ -1,5 +1,6 @@
 included:
   - FullscreenSwitcher
+  - FullscreenSwitcherDemo
 disabled_rules:
   - unused_closure_parameter
   - trailing_comma
