@@ -44,26 +44,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="extraLight"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVc-u5-Epb">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVc-u5-Epb">
                                 <rect key="frame" x="20" y="40" width="335" height="587"/>
                                 <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="H9v-Ha-uk6" id="pqI-u1-dJZ"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-2E-jrq">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JVc-u5-Epb" firstAttribute="leading" secondItem="xI5-2F-0t8" secondAttribute="leading" constant="20" id="9rY-Zp-xMe"/>
+                            <constraint firstItem="rcJ-2E-jrq" firstAttribute="centerY" secondItem="xI5-2F-0t8" secondAttribute="centerY" id="Cke-1Y-70q"/>
                             <constraint firstAttribute="trailing" secondItem="Ied-JB-zxS" secondAttribute="trailing" id="E7g-jc-dNP"/>
                             <constraint firstItem="JVc-u5-Epb" firstAttribute="top" secondItem="lD2-MT-mKc" secondAttribute="bottom" constant="20" id="GhA-3n-yme"/>
                             <constraint firstItem="mOc-gc-8Hg" firstAttribute="top" secondItem="JVc-u5-Epb" secondAttribute="bottom" constant="40" id="QfN-2p-qOl"/>
                             <constraint firstItem="Ied-JB-zxS" firstAttribute="top" secondItem="xI5-2F-0t8" secondAttribute="top" id="lVY-0K-XDo"/>
                             <constraint firstItem="Ied-JB-zxS" firstAttribute="leading" secondItem="xI5-2F-0t8" secondAttribute="leading" id="qgK-pc-kef"/>
+                            <constraint firstItem="rcJ-2E-jrq" firstAttribute="centerX" secondItem="xI5-2F-0t8" secondAttribute="centerX" id="qs7-9o-wf6"/>
                             <constraint firstItem="mOc-gc-8Hg" firstAttribute="top" secondItem="Ied-JB-zxS" secondAttribute="bottom" id="rhJ-Ky-1UG"/>
                             <constraint firstItem="JVc-u5-Epb" firstAttribute="centerX" secondItem="xI5-2F-0t8" secondAttribute="centerX" id="zib-wk-h8y"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="rcJ-2E-jrq" id="hwx-aS-SLG"/>
                         <outlet property="webView" destination="JVc-u5-Epb" id="VNF-xx-nRx"/>
                     </connections>
                 </viewController>

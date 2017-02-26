@@ -22,7 +22,8 @@ final class WebViewController: UIViewController {
     }
   }
 
-  @IBOutlet private weak var webView: UIWebView!
+  @IBOutlet fileprivate weak var webView: UIWebView!
+  @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,5 +31,20 @@ final class WebViewController: UIViewController {
     if let url = url {
       self.url = url
     }
+  }
+}
+
+extension WebViewController: UIWebViewDelegate {
+
+  func webViewDidStartLoad(_ webView: UIWebView) {
+    activityIndicator.startAnimating()
+  }
+
+  func webViewDidFinishLoad(_ webView: UIWebView) {
+    activityIndicator.stopAnimating()
+  }
+
+  func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+    activityIndicator.stopAnimating()
   }
 }
