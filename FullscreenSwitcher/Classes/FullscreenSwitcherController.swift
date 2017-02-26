@@ -24,11 +24,7 @@ public class FullscreenSwitcherController: UIViewController {
             contentViewController.didMove(toParentViewController: self)
         }
     }
-    public var switchButton: UIButton! {
-        didSet {
-
-        }
-    }
+    public var switchButtonConfiguration: ((UIButton, CGRect) -> Void)! // swiftlint:disable:this force_unwrapping
 
     // MARK: Private
     private let fullscreenView: UIView = {
@@ -49,18 +45,31 @@ public class FullscreenSwitcherController: UIViewController {
         return view
     }()
 
+    private let switchButton: UIButton = {
+
+        let button = UIButton()
+        button.addTarget(self, action: #selector(hideContentView(sender:)), for: .touchDown)
+        button.addTarget(self, action: #selector(showContentView(sender:)), for: [ .touchUpInside, .touchUpOutside ])
+
+        return button
+    }()
+
     // MARK: - Lifecycle
     override public func viewDidLoad() {
         super.viewDidLoad()
 
         assert(fullscreenViewController != nil, "fullscreenViewController cannot be nil")
         assert(contentViewController != nil, "contentViewController cannot be nil")
+        assert(switchButtonConfiguration != nil, "switchButton cannot be nil")
 
         fullscreenView.frame = view.bounds
         view.addSubview(fullscreenView)
 
         contentView.frame = view.bounds
         view.addSubview(contentView)
+
+        view.addSubview(switchButton)
+        switchButtonConfiguration(switchButton, view.bounds)
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -71,5 +80,22 @@ public class FullscreenSwitcherController: UIViewController {
 
         contentView.addSubview(contentViewController.view)
         contentViewController.view.frame = view.bounds
+
+    }
+
+    // MARK: - Behavior
+    // MARK: Public
+    public func hideContentView(sender: AnyObject!) {
+        print(#function)    // FixMe: remove debug code
+        setContentViewHidden(true)
+    }
+
+    public func showContentView(sender: AnyObject!) {
+        print(#function)    // FixMe: remove debug code
+        setContentViewHidden(false)
+    }
+
+    public func setContentViewHidden(_ isHidden: Bool) {
+
     }
 }
