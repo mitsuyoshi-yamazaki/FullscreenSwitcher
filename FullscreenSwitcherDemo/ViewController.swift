@@ -11,6 +11,25 @@ import FullscreenSwitcher
 
 final class ViewController: UIViewController {
 
+  // MARK: - Accessor
+  fileprivate lazy var qrCodeViewController: QRRecognitionViewController = {
+
+    let controller = QRRecognitionViewController()
+    controller.delegate = self
+
+    return controller
+  }()
+  fileprivate lazy var webViewController: WebViewController = {
+
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    guard let controller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else {
+      fatalError()
+    }
+
+    return controller
+  }()
+
+  // MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -29,14 +48,14 @@ final class ViewController: UIViewController {
     switcherController.modalTransitionStyle = .crossDissolve
 
 #if IOS_SIMULATOR
-    let imageViewController = self.storyboard!.instantiateViewController(withIdentifier: "ImageViewController")
+    let imageViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageViewController")
     switcherController.fullscreenViewController = imageViewController
+
+    webViewController.url = URL(string: "https//:google.com")
 #else
-    let qrCodeViewController = QRRecognitionViewController()
     switcherController.fullscreenViewController = qrCodeViewController
 #endif
 
-    let webViewController = self.storyboard!.instantiateViewController(withIdentifier: "WebViewController")
     switcherController.contentViewController = webViewController
 
     switcherController.switchButtonConfiguration = { (button, superViewFrame) in
@@ -49,5 +68,15 @@ final class ViewController: UIViewController {
     }
 
     self.present(switcherController, animated: true, completion: nil)
+  }
+}
+
+extension ViewController: QRRecognitionViewControllerDelegate {
+
+  func qrRecognitionViewControllerDelegate(controller: QRRecognitionViewController, didRecognizeCode qrCode: String) {
+    guard let url = URL(string: qrCode) else {
+      return
+    }
+    webViewController.url = url
   }
 }

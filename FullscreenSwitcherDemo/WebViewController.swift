@@ -16,8 +16,9 @@ final class WebViewController: UIViewController {
         return
       }
 
+      print("Start loading \"\(url.absoluteString)\"")
       let request = URLRequest(url: url)
-      webView.loadRequest(request)
+      webView?.loadRequest(request)
     }
   }
 
@@ -25,5 +26,9 @@ final class WebViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    if let url = url {
+      self.url = url
+    }
   }
 }
