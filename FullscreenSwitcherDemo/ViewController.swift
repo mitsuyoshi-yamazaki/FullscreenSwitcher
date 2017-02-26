@@ -28,19 +28,21 @@ final class ViewController: UIViewController {
     let switcherController = FullscreenSwitcherController()
     switcherController.modalTransitionStyle = .crossDissolve
 
-    let dummyFullscreenViewController = UIViewController()
-    dummyFullscreenViewController.view.backgroundColor = UIColor.red
-    switcherController.fullscreenViewController = dummyFullscreenViewController
+//    let imageViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageViewController")
+//    switcherController.fullscreenViewController = imageViewController
 
-    let dummyContentViewController = UIViewController()
-    dummyContentViewController.view.backgroundColor = UIColor.yellow
-    switcherController.contentViewController = dummyContentViewController
+    let qrCodeViewController = QRRecognitionViewController()
+    switcherController.fullscreenViewController = qrCodeViewController
+
+    let webViewController = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController")
+    switcherController.contentViewController = webViewController
 
     switcherController.switchButtonConfiguration = { (button, superViewFrame) in
-      button.setTitle("RED!!", for: .normal)
-      button.backgroundColor = UIColor.darkGray
-      button.setTitleColor(UIColor.white, for: .normal)
-      button.frame = CGRect(x: 0.0, y: superViewFrame.size.height - 40.0, width: 100.0, height: 40.0)
+
+      button.backgroundColor = UIColor.clear
+      button.setImage(#imageLiteral(resourceName: "QRButton"), for: .normal)
+      let size: CGFloat = 92.0
+      button.frame = CGRect(x: 0.0, y: superViewFrame.size.height - size, width: size, height: size)
       button.autoresizingMask = [ .flexibleTopMargin, .flexibleRightMargin ]
     }
 

@@ -18,6 +18,10 @@
 		2CACD6701E62ADE200C0ED18 /* FullscreenSwitcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */; };
 		2CACD6711E62ADE200C0ED18 /* FullscreenSwitcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CACD67C1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACD67B1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift */; };
+		2CD14F231E62C79B00831E78 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD14F221E62C79B00831E78 /* WebViewController.swift */; };
+		2CD14F251E62C8F100831E78 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD14F241E62C8F100831E78 /* ImageViewController.swift */; };
+		2CE5E7141E62C3BD00A7B072 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE5E7131E62C3BD00A7B072 /* AVFoundation.framework */; };
+		2CE5E7161E62C3D400A7B072 /* QRRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5E7151E62C3D400A7B072 /* QRRecognitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		2CACD66A1E62ADE200C0ED18 /* FullscreenSwitcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenSwitcherTests.swift; sourceTree = "<group>"; };
 		2CACD66C1E62ADE200C0ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACD67B1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenSwitcherController.swift; sourceTree = "<group>"; };
+		2CD14F221E62C79B00831E78 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		2CD14F241E62C8F100831E78 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		2CE5E7131E62C3BD00A7B072 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2CE5E7151E62C3D400A7B072 /* QRRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRRecognitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE5E7141E62C3BD00A7B072 /* AVFoundation.framework in Frameworks */,
 				2CACD6701E62ADE200C0ED18 /* FullscreenSwitcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +118,7 @@
 				2CACD65C1E62ADE200C0ED18 /* FullscreenSwitcher */,
 				2CACD6691E62ADE200C0ED18 /* FullscreenSwitcherTests */,
 				2CACD6411E62A64300C0ED18 /* Products */,
+				2CE5E7121E62C3BD00A7B072 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +137,9 @@
 			children = (
 				2CACD6431E62A64300C0ED18 /* AppDelegate.swift */,
 				2CACD6451E62A64300C0ED18 /* ViewController.swift */,
+				2CE5E7151E62C3D400A7B072 /* QRRecognitionViewController.swift */,
+				2CD14F221E62C79B00831E78 /* WebViewController.swift */,
+				2CD14F241E62C8F100831E78 /* ImageViewController.swift */,
 				2CACD6471E62A64300C0ED18 /* Main.storyboard */,
 				2CACD64A1E62A64300C0ED18 /* Assets.xcassets */,
 				2CACD64C1E62A64300C0ED18 /* LaunchScreen.storyboard */,
@@ -160,6 +173,14 @@
 				2CACD67B1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		2CE5E7121E62C3BD00A7B072 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CE5E7131E62C3BD00A7B072 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +266,7 @@
 				TargetAttributes = {
 					2CACD63F1E62A64300C0ED18 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3EDT3669ZJ;
 						ProvisioningStyle = Automatic;
 					};
 					2CACD65A1E62ADE200C0ED18 = {
@@ -328,8 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE5E7161E62C3D400A7B072 /* QRRecognitionViewController.swift in Sources */,
 				2CACD6461E62A64300C0ED18 /* ViewController.swift in Sources */,
+				2CD14F251E62C8F100831E78 /* ImageViewController.swift in Sources */,
 				2CACD6441E62A64300C0ED18 /* AppDelegate.swift in Sources */,
+				2CD14F231E62C79B00831E78 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +512,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
+				DEVELOPMENT_TEAM = 3EDT3669ZJ;
+				INFOPLIST_FILE = FullscreenSwitcherDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherDemo;
@@ -501,7 +527,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
+				DEVELOPMENT_TEAM = 3EDT3669ZJ;
+				INFOPLIST_FILE = FullscreenSwitcherDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherDemo;
@@ -515,8 +542,10 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -541,6 +570,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

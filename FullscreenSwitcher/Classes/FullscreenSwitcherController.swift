@@ -89,16 +89,14 @@ public class FullscreenSwitcherController: UIViewController {
   // MARK: - Behavior
   // MARK: Public
   public func hideContentView(sender: AnyObject!) {
-    print(#function)    // FixMe: remove debug code
     setContentViewHidden(true, animated: true)
   }
 
   public func showContentView(sender: AnyObject!) {
-    print(#function)    // FixMe: remove debug code
     setContentViewHidden(false, animated: true)
   }
 
-  public func setContentViewHidden(_ isHidden: Bool, animated: Bool) {  // TODO: use animated 
+  public func setContentViewHidden(_ isHidden: Bool, animated: Bool) {  // TODO: use animated
     guard isHidden != contentViewHidden else {
       return
     }
@@ -110,7 +108,7 @@ public class FullscreenSwitcherController: UIViewController {
     contentView.isUserInteractionEnabled = false
     contentView.isHidden = false
 
-    UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: { [weak self] _ in
+    UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: { [weak self] _ in
 
       if isHidden {
         self?.contentView.alpha = 0.0
