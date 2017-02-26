@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FullscreenSwitcher 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>FullscreenSwitcher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>2CACD63F1E62A64300C0ED18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2CACD65A1E62ADE200C0ED18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2CACD6621E62ADE200C0ED18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
