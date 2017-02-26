@@ -12,7 +12,51 @@
 		2CACD6491E62A64300C0ED18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACD6471E62A64300C0ED18 /* Main.storyboard */; };
 		2CACD64B1E62A64300C0ED18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACD64A1E62A64300C0ED18 /* Assets.xcassets */; };
 		2CACD64E1E62A64300C0ED18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACD64C1E62A64300C0ED18 /* LaunchScreen.storyboard */; };
+		2CACD6641E62ADE200C0ED18 /* FullscreenSwitcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */; };
+		2CACD66B1E62ADE200C0ED18 /* FullscreenSwitcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACD66A1E62ADE200C0ED18 /* FullscreenSwitcherTests.swift */; };
+		2CACD66D1E62ADE200C0ED18 /* FullscreenSwitcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CACD65D1E62ADE200C0ED18 /* FullscreenSwitcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CACD6701E62ADE200C0ED18 /* FullscreenSwitcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */; };
+		2CACD6711E62ADE200C0ED18 /* FullscreenSwitcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2CACD67C1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACD67B1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CACD6651E62ADE200C0ED18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CACD6381E62A64300C0ED18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CACD65A1E62ADE200C0ED18;
+			remoteInfo = FullscreenSwitcher;
+		};
+		2CACD6671E62ADE200C0ED18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CACD6381E62A64300C0ED18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CACD63F1E62A64300C0ED18;
+			remoteInfo = FullscreenSwitcherDemo;
+		};
+		2CACD66E1E62ADE200C0ED18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CACD6381E62A64300C0ED18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CACD65A1E62ADE200C0ED18;
+			remoteInfo = FullscreenSwitcher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2CACD6751E62ADE200C0ED18 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CACD6711E62ADE200C0ED18 /* FullscreenSwitcher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2CACD6401E62A64300C0ED18 /* FullscreenSwitcherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullscreenSwitcherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +66,13 @@
 		2CACD64A1E62A64300C0ED18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CACD64D1E62A64300C0ED18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CACD64F1E62A64300C0ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FullscreenSwitcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACD65D1E62ADE200C0ED18 /* FullscreenSwitcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullscreenSwitcher.h; sourceTree = "<group>"; };
+		2CACD65E1E62ADE200C0ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CACD6631E62ADE200C0ED18 /* FullscreenSwitcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullscreenSwitcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACD66A1E62ADE200C0ED18 /* FullscreenSwitcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenSwitcherTests.swift; sourceTree = "<group>"; };
+		2CACD66C1E62ADE200C0ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CACD67B1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenSwitcherController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +80,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CACD6701E62ADE200C0ED18 /* FullscreenSwitcher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CACD6571E62ADE200C0ED18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CACD6601E62ADE200C0ED18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CACD6641E62ADE200C0ED18 /* FullscreenSwitcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,7 +105,9 @@
 		2CACD6371E62A64300C0ED18 = {
 			isa = PBXGroup;
 			children = (
-				2CACD6421E62A64300C0ED18 /* FullscreenSwitcher */,
+				2CACD6421E62A64300C0ED18 /* FullscreenSwitcherDemo */,
+				2CACD65C1E62ADE200C0ED18 /* FullscreenSwitcher */,
+				2CACD6691E62ADE200C0ED18 /* FullscreenSwitcherTests */,
 				2CACD6411E62A64300C0ED18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,11 +116,13 @@
 			isa = PBXGroup;
 			children = (
 				2CACD6401E62A64300C0ED18 /* FullscreenSwitcherDemo.app */,
+				2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */,
+				2CACD6631E62ADE200C0ED18 /* FullscreenSwitcherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CACD6421E62A64300C0ED18 /* FullscreenSwitcher */ = {
+		2CACD6421E62A64300C0ED18 /* FullscreenSwitcherDemo */ = {
 			isa = PBXGroup;
 			children = (
 				2CACD6431E62A64300C0ED18 /* AppDelegate.swift */,
@@ -61,11 +132,48 @@
 				2CACD64C1E62A64300C0ED18 /* LaunchScreen.storyboard */,
 				2CACD64F1E62A64300C0ED18 /* Info.plist */,
 			);
-			name = FullscreenSwitcher;
 			path = FullscreenSwitcherDemo;
 			sourceTree = "<group>";
 		};
+		2CACD65C1E62ADE200C0ED18 /* FullscreenSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				2CACD65D1E62ADE200C0ED18 /* FullscreenSwitcher.h */,
+				2CACD65E1E62ADE200C0ED18 /* Info.plist */,
+				2CACD67A1E62AE2B00C0ED18 /* Classes */,
+			);
+			path = FullscreenSwitcher;
+			sourceTree = "<group>";
+		};
+		2CACD6691E62ADE200C0ED18 /* FullscreenSwitcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CACD66A1E62ADE200C0ED18 /* FullscreenSwitcherTests.swift */,
+				2CACD66C1E62ADE200C0ED18 /* Info.plist */,
+			);
+			path = FullscreenSwitcherTests;
+			sourceTree = "<group>";
+		};
+		2CACD67A1E62AE2B00C0ED18 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2CACD67B1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2CACD6581E62ADE200C0ED18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CACD66D1E62ADE200C0ED18 /* FullscreenSwitcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2CACD63F1E62A64300C0ED18 /* FullscreenSwitcherDemo */ = {
@@ -76,15 +184,54 @@
 				2CACD63D1E62A64300C0ED18 /* Frameworks */,
 				2CACD63E1E62A64300C0ED18 /* Resources */,
 				2CACD6551E62A9D500C0ED18 /* Swiftlint */,
+				2CACD6751E62ADE200C0ED18 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2CACD66F1E62ADE200C0ED18 /* PBXTargetDependency */,
 			);
 			name = FullscreenSwitcherDemo;
 			productName = FullscreenSwitcher;
 			productReference = 2CACD6401E62A64300C0ED18 /* FullscreenSwitcherDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2CACD65A1E62ADE200C0ED18 /* FullscreenSwitcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CACD6721E62ADE200C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcher" */;
+			buildPhases = (
+				2CACD6561E62ADE200C0ED18 /* Sources */,
+				2CACD6571E62ADE200C0ED18 /* Frameworks */,
+				2CACD6581E62ADE200C0ED18 /* Headers */,
+				2CACD6591E62ADE200C0ED18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FullscreenSwitcher;
+			productName = FullscreenSwitcher;
+			productReference = 2CACD65B1E62ADE200C0ED18 /* FullscreenSwitcher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2CACD6621E62ADE200C0ED18 /* FullscreenSwitcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CACD6761E62ADE200C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcherTests" */;
+			buildPhases = (
+				2CACD65F1E62ADE200C0ED18 /* Sources */,
+				2CACD6601E62ADE200C0ED18 /* Frameworks */,
+				2CACD6611E62ADE200C0ED18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CACD6661E62ADE200C0ED18 /* PBXTargetDependency */,
+				2CACD6681E62ADE200C0ED18 /* PBXTargetDependency */,
+			);
+			name = FullscreenSwitcherTests;
+			productName = FullscreenSwitcherTests;
+			productReference = 2CACD6631E62ADE200C0ED18 /* FullscreenSwitcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +246,16 @@
 					2CACD63F1E62A64300C0ED18 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+					};
+					2CACD65A1E62ADE200C0ED18 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					2CACD6621E62ADE200C0ED18 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2CACD63F1E62A64300C0ED18;
 					};
 				};
 			};
@@ -116,6 +273,8 @@
 			projectRoot = "";
 			targets = (
 				2CACD63F1E62A64300C0ED18 /* FullscreenSwitcherDemo */,
+				2CACD65A1E62ADE200C0ED18 /* FullscreenSwitcher */,
+				2CACD6621E62ADE200C0ED18 /* FullscreenSwitcherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +287,20 @@
 				2CACD64E1E62A64300C0ED18 /* LaunchScreen.storyboard in Resources */,
 				2CACD64B1E62A64300C0ED18 /* Assets.xcassets in Resources */,
 				2CACD6491E62A64300C0ED18 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CACD6591E62ADE200C0ED18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CACD6611E62ADE200C0ED18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +333,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CACD6561E62ADE200C0ED18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CACD67C1E62AE4B00C0ED18 /* FullscreenSwitcherController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CACD65F1E62ADE200C0ED18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CACD66B1E62ADE200C0ED18 /* FullscreenSwitcherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CACD6661E62ADE200C0ED18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CACD65A1E62ADE200C0ED18 /* FullscreenSwitcher */;
+			targetProxy = 2CACD6651E62ADE200C0ED18 /* PBXContainerItemProxy */;
+		};
+		2CACD6681E62ADE200C0ED18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CACD63F1E62A64300C0ED18 /* FullscreenSwitcherDemo */;
+			targetProxy = 2CACD6671E62ADE200C0ED18 /* PBXContainerItemProxy */;
+		};
+		2CACD66F1E62ADE200C0ED18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CACD65A1E62ADE200C0ED18 /* FullscreenSwitcher */;
+			targetProxy = 2CACD66E1E62ADE200C0ED18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2CACD6471E62A64300C0ED18 /* Main.storyboard */ = {
@@ -278,6 +485,7 @@
 		2CACD6531E62A64300C0ED18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -291,6 +499,7 @@
 		2CACD6541E62A64300C0ED18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -298,6 +507,77 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2CACD6731E62ADE200C0ED18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2CACD6741E62ADE200C0ED18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2CACD6771E62ADE200C0ED18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = FullscreenSwitcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FullscreenSwitcherDemo.app/FullscreenSwitcherDemo";
+			};
+			name = Debug;
+		};
+		2CACD6781E62ADE200C0ED18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = FullscreenSwitcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FullscreenSwitcherDemo.app/FullscreenSwitcherDemo";
 			};
 			name = Release;
 		};
@@ -320,6 +600,25 @@
 				2CACD6541E62A64300C0ED18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CACD6721E62ADE200C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CACD6731E62ADE200C0ED18 /* Debug */,
+				2CACD6741E62ADE200C0ED18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CACD6761E62ADE200C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CACD6771E62ADE200C0ED18 /* Debug */,
+				2CACD6781E62ADE200C0ED18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
