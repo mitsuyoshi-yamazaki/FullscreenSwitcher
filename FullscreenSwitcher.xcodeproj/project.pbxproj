@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CACD6401E62A64300C0ED18 /* FullscreenSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullscreenSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACD6401E62A64300C0ED18 /* FullscreenSwitcherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullscreenSwitcherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACD6431E62A64300C0ED18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CACD6451E62A64300C0ED18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CACD6481E62A64300C0ED18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		2CACD6411E62A64300C0ED18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CACD6401E62A64300C0ED18 /* FullscreenSwitcher.app */,
+				2CACD6401E62A64300C0ED18 /* FullscreenSwitcherDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CACD63F1E62A64300C0ED18 /* FullscreenSwitcher */ = {
+		2CACD63F1E62A64300C0ED18 /* FullscreenSwitcherDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CACD6521E62A64300C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcher" */;
+			buildConfigurationList = 2CACD6521E62A64300C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcherDemo" */;
 			buildPhases = (
 				2CACD63C1E62A64300C0ED18 /* Sources */,
 				2CACD63D1E62A64300C0ED18 /* Frameworks */,
@@ -80,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = FullscreenSwitcher;
+			name = FullscreenSwitcherDemo;
 			productName = FullscreenSwitcher;
-			productReference = 2CACD6401E62A64300C0ED18 /* FullscreenSwitcher.app */;
+			productReference = 2CACD6401E62A64300C0ED18 /* FullscreenSwitcherDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CACD63F1E62A64300C0ED18 /* FullscreenSwitcher */,
+				2CACD63F1E62A64300C0ED18 /* FullscreenSwitcherDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -281,7 +281,7 @@
 				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -294,7 +294,7 @@
 				INFOPLIST_FILE = FullscreenSwitcher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = mitsuyoshi.FullscreenSwitcherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -312,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CACD6521E62A64300C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcher" */ = {
+		2CACD6521E62A64300C0ED18 /* Build configuration list for PBXNativeTarget "FullscreenSwitcherDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CACD6531E62A64300C0ED18 /* Debug */,
